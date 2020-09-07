@@ -1,0 +1,111 @@
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+#footer{
+  font-size: 12px;
+  height:5px;
+  width:300px;
+  top:80%;
+  left:50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  color:black;
+  text-align: center;
+  font-family: Comic Sans MS;
+}
+/* SOCIAL ICONS - GENERAL */
+.social { 
+  list-style:none; 
+  margin:30px auto; 
+  width:464px; 
+}
+.social li { 
+  display:inline; 
+  float:left; 
+  background-repeat:no-repeat; 
+}
+.social li a { 
+  display:block; 
+  width:48px; 
+  height:48px; 
+  padding-right:10px; 
+  position:relative; 
+  text-decoration:none; 
+}
+.social li a strong { 
+  font-weight:normal; 
+  position:absolute; 
+  left:20px; 
+  top:-1px; 
+  color:#fff; 
+  padding:3px; 
+  z-index:9999;
+  text-shadow:1px 1px 0 rgba(0, 0, 0, 0.75); 
+  background-color:rgba(0, 0, 0, 0.7);
+  -moz-border-radius:3px; 
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+  -webkit-border-radius:3px; 
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+  border-radius:3px; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+li.facebook { background-image:url("../image/facebook.png"); }
+
+li.linkedin { background-image:url("../image/linkedin.png"); }
+
+li.twitter { background-image:url("../image/twitter.png"); }
+
+/* SOCIAL ICONS - CSS3 */
+#css3:hover li { opacity:0.2; }
+
+#css3 li { 
+  -webkit-transition-property: opacity; 
+  -webkit-transition-duration: 500ms;
+  -moz-transition-property: opacity; 
+  -moz-transition-duration: 500ms; 
+ }
+#css3 li a strong { 
+  opacity:0;
+  -webkit-transition-property: opacity, top; 
+  -webkit-transition-duration: 300ms;
+  -moz-transition-property: opacity, top; 
+  -moz-transition-duration: 300ms;
+}
+
+#css3 li:hover { opacity:1; }
+#css3 li:hover a strong { 
+  opacity:1; 
+  top:-10px; 
+}

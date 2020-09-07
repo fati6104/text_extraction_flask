@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome Customer</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/javasc_in.js"></script>
+    <style>
+    #mydiv{
+      background-color:#F8F8FF;
+      padding: 5px;
+      margin: 120px;}
+    .dropbtn {
+      background-color: #6495ED;}
+    .dropdown:hover .dropbtn {background-color: #AFEEEE;}
+    .dropdown-content {background-color: #F8F8FF;}
+    h2{
+    font-family: "Lucida Handwriting","Agency FB","Arial Black";
+    font-size: 40px;
+    text-decoration: underline;}
+    b{
+    font-family: "Century Gothic";
+    font-size: 15px;}
+    }
+      #footer{
+  float:left;
+}
+</style>
+  </head>
+  <body background="../static/image/ground.png">
+  	<div id="mydiv">
+    <center><h2>Welcome to our Website !</h2>
+<p>
+	<b>
+    	Hello Customer ! You can access <i>"File"</i> link if you want to extract data from any PDF,Word,Document Image,Scenery Image or an Excel File. 
+    </b> <br><hr><br>
+    <b>
+    	You can also extract data from any CV by accessing <i>"CV File"</i> .
+    </b> <br><hr><br>
+    <b>Thank You.</b>
+</p>
+
+<div class="dropdown">
+  <button class="dropbtn">Extract The Data</button>
+  <div class="dropdown-content">
+    <a href="{{ url_for('upload_page') }}">File</a>
+    <a href="{{ url_for('data_cv') }}">CV File</a>
+  </div>
+</div>
+</center></div>
+<br><br>
+<div id="footer">
+    <ul class="social" id="css3">
+     
+      <li class="facebook">
+        <a href="http://www.facebook.com/"><strong>Facebook</strong></a>
+      </li>
+      
+      <li class="linkedin">
+        <a href="http://www.linkedin.com/"><strong>LinkedIn</strong></a>
+      </li>
+      
+      <li class="twitter">
+        <a href="http://twitter.com/"><strong>Twitter</strong></a>
+      </li>
+    </ul>
+  </div>
+<script>
+  $(document).ready(function()
+{
+  // Hide all the tooltips
+  $("#jquery li").each(function() {
+    $("a strong", this).css("opacity", "0");
+  });
+  
+  $("#jquery li").hover(function() { // Mouse over
+    $(this)
+      .stop().fadeTo(500, 1)
+      .siblings().stop().fadeTo(500, 0.2);
+      
+    $("a strong", this)
+      .stop()
+      .animate({
+        opacity: 1,
+        top: "-10px"
+      }, 300);
+    
+  }, function() { // Mouse out
+    $(this)
+      .stop().fadeTo(500, 1)
+      .siblings().stop().fadeTo(500, 1);
+      
+    $("a strong", this)
+      .stop()
+      .animate({
+        opacity: 0,
+        top: "-1px"
+      }, 300);
+  });
+  
+});
+</script>
+</body>
+</html>
